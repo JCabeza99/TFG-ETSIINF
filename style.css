@@ -1,0 +1,132 @@
+:root {
+  /* TODO añadir más colores */
+  --color-primario: #181818;
+  --color-secundario: #f0f0f0;
+  --color-paneles: #999999;
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario: #f0f0f0;
+    --color-secundario: #333333;
+  }
+} */
+
+::selection {
+  background-color: var(--negro);
+  color: var(--negro);
+}
+
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: block;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+}
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: var(--tipo-principal);
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
+  line-height: 1.4em;
+}
+
+.header {
+  margin: 0 5px;
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+.controls {
+  flex-basis: 200px;
+  padding: 0 5px;
+}
+
+.controls .force {
+  background-color: var(--color-paneles);
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
