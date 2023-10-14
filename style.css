@@ -91,9 +91,11 @@ td {
 }
 
 svg {
-  width: 100%;
+  flex-basis: 100%;
+  min-width: 200px;
   display: block;
   fill: currentColor;
+  min-height: 100vh;
 }
 
 body {
@@ -117,16 +119,78 @@ body {
 }
 
 .controls {
-  flex-basis: 200px;
+  flex-basis: 20%;
   padding: 0 5px;
 }
 
 .controls .force {
   background-color: var(--color-paneles);
   border-radius: 3px;
-  padding: 5px;
-  margin: 5px 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  display: block;
+}
+
+.controls .force p {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+/* graph styles */
+.links line {
+  stroke: #aaa;
+}
+.nodes circle {
+  pointer-events: all;
+}
+
+/* slider styles */
+
+.switch {
+  display: inline-block;
+  height: 1rem;
+  position: relative;
+  width: 2rem;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 0.1rem;
+  content: "";
+  height: 0.8rem;
+  left: 0.2rem;
+  position: absolute;
+  transition: 0.4s;
+  width: 0.8rem;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(0.8rem);
+}
+
+.slider.round {
+  border-radius: 1rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
